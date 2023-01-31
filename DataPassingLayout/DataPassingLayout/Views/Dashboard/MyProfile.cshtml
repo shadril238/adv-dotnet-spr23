@@ -1,0 +1,26 @@
+﻿
+@{
+    ViewBag.Title = "MyProfile";
+    Layout = "~/Views/Shared/_LoggedLayout.cshtml";
+}
+
+<h2>MyProfile</h2>
+@ViewBag.Name <br />
+Student, CS, FST, AIUB <br />
+@ViewBag.Course <br />
+Section [@ViewBag.Section]<br />
+Groupmates:
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+    </tr>
+    @for(int i = 0; i < ViewBag.Groupmates.Length; i++)
+     {
+        <tr>
+            <td>@(i+1)</td>
+            <td>@ViewBag.Groupmates[i]</td>
+        </tr>
+     }
+</table>
+
