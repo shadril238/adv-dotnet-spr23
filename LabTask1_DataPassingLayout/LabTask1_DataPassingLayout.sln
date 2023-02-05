@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LabTask1_DataPassingLayout", "LabTask1_DataPassingLayout\LabTask1_DataPassingLayout.csproj", "{329776F7-D32A-4605-BB69-3C3771A1B1E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{329776F7-D32A-4605-BB69-3C3771A1B1E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{329776F7-D32A-4605-BB69-3C3771A1B1E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{329776F7-D32A-4605-BB69-3C3771A1B1E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{329776F7-D32A-4605-BB69-3C3771A1B1E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {61FCE380-5F97-46CD-B8E3-E024B529F5D1}
+	EndGlobalSection
+EndGlobal

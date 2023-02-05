@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+</head>
+<body>
+    <div>
+        <a href="/Pages/Home" class="btn btn-default">Home</a>
+        <a href="/Pages/Aboutus" class="btn btn-default">About Us</a>
+        <a href="/Pages/Login" class="btn btn-default">Login</a>
+    </div>
+    <div>
+        @RenderBody()
+    </div>
+    <div>
+        Copyright @@shadril238
+    </div>
+</body>
+</html>
