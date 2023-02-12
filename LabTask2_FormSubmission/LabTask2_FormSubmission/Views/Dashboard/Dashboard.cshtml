@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewBag.Title = "Dashboard";
+    Layout = "~/Views/Shared/_DashboardLayout.cshtml";
+}
+
+<h2>Dashboard</h2>
+<h3>This is Dashboard</h3>
+<table class="table table-bordered">
+    <tr>
+        <th>Product ID</th>
+        <th>Product Name</th>
+    </tr>
+    @foreach(var item in Model)
+     {
+        <tr>
+            <td>@item.Pid</td>
+            <td>@item.Pname</td>
+        </tr>       
+     }
+</table>
+
+

@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_HomeLayout.cshtml";
+}
+
+@if (Model != null)
+{
+    <h4>Logged in as, @Model.Uname</h4>
+    <h4>Password, @Model.Pass</h4>
+}
+
+<h2>Login</h2>
+<form action="" method="post">
+    <input type="text" name="Uname" placeholder="Username" class="form-control" />
+    <br />
+    <input type="password" name="Pass" placeholder="Password" class="form-control" />
+    <br />
+    <input type="submit" value="Login" class="btn btn-danger" />
+</form>
+
