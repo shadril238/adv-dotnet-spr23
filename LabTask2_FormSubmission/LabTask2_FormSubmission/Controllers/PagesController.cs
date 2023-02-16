@@ -28,7 +28,7 @@ namespace LabTask2_FormSubmission.Controllers
         [HttpPost]
         public ActionResult Login(Login login)
         {
-            
+
             return View(login);
         }
     }
