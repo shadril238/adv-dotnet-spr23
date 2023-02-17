@@ -10,6 +10,8 @@
         <th>Gender</th>
         <th>Dob</th>
         <th></th>
+        <th></th>
+        <th></th>
     </tr>
     @foreach (var item in Model)
     {
@@ -20,6 +22,7 @@
             <td>@item.Dob</td>
             <td><a href="/Home/Details/@item.Id">Details</a></td>
             <td><a href="/Home/Edit/@item.Id">Edit</a></td>
+            <td><a href="/Home/Delete/@item.Id">Remove</a></td>
         </tr>
     }
 </table>

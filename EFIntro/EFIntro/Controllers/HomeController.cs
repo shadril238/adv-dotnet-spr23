@@ -80,6 +80,14 @@ namespace EFIntro.Controllers
             db.SaveChanges();
             return RedirectToAction("List");
         }
+        public ActionResult Delete(int id)
+        {
+            var db = new dotnetEntities1();
+            var st = (from s in db.Students where s.Id == id select s).SingleOrDefault();
+            db.Students.Remove(st);
+            db.SaveChanges();
+            return RedirectToAction("List");
+        }
 
 
     }
