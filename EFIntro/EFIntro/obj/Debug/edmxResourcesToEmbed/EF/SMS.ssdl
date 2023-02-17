@@ -4,14 +4,14 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="Student">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nchar" MaxLength="20" Nullable="false" />
     <Property Name="Gender" Type="nchar" MaxLength="10" Nullable="false" />
     <Property Name="Profession" Type="nchar" MaxLength="10" Nullable="false" />
