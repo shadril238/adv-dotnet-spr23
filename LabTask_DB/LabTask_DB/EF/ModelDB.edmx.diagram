@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="324fb1b6dd18411786933a9d695255ad" Name="Diagram1">
+        <EntityTypeShape EntityType="LabTask_DBModel.Category" Width="1.5" PointX="0.5" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabTask_DBModel.Order" Width="1.5" PointX="4.75" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabTask_DBModel.Product" Width="1.5" PointX="2.875" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabTask_DBModel.ProductOrder" Width="1.5" PointX="4.875" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabTask_DBModel.UserOrder" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LabTask_DBModel.User" Width="1.5" PointX="0.5" PointY="0.5" IsExpanded="true" />
+        <AssociationConnector Association="LabTask_DBModel.FK_Product_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="LabTask_DBModel.FK_ProductOrder_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="LabTask_DBModel.FK_UserOrder_Orders" ManuallyRouted="false" />
+        <AssociationConnector Association="LabTask_DBModel.FK_ProductOrder_Product" ManuallyRouted="false" />
+        <AssociationConnector Association="LabTask_DBModel.FK_UserOrder_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
