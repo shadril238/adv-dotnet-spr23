@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PMS_EFCodeFirst.EF.Models.Product>
+
+@{
+    ViewBag.Title = "E-Commerce";
+}
+
+<h2>Index</h2>
+@if (TempData["Msg"] != null)
+{
+    <h1 class="alert @TempData["Color"]">@TempData["Msg"]</h1>
+
+}
+
+<p>
+    @Html.ActionLink("Go to Cart", "Cart")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Name)*@
+            Product Name
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Category.Name)*@
+            Category Name
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Price)*@
+            Unit Price
+        </th>
+        <th>
+            @*@Html.DisplayNameFor(model => model.Qty)*@
+            Stock Quantity
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Category.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            <a class="btn btn-success" href="/Order/AddCart/@item.Id">Add to Cart</a>
+        </td>
+    </tr>
+}
+
+</table>
+<p class="text-center">
+    @for (int i = 1; i <= ViewBag.pages; i++)
+    {
+        <a href="/Order/Index/@i" class="btn btn-danger">@i</a>
+    }
+</p>
