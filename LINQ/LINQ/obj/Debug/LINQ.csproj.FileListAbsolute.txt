@@ -1,0 +1,8 @@
+E:\adv-dotnet-spr23\LINQ\LINQ\bin\Debug\LINQ.exe.config
+E:\adv-dotnet-spr23\LINQ\LINQ\bin\Debug\LINQ.exe
+E:\adv-dotnet-spr23\LINQ\LINQ\bin\Debug\LINQ.pdb
+E:\adv-dotnet-spr23\LINQ\LINQ\obj\Debug\LINQ.csproj.AssemblyReference.cache
+E:\adv-dotnet-spr23\LINQ\LINQ\obj\Debug\LINQ.csproj.SuggestedBindingRedirects.cache
+E:\adv-dotnet-spr23\LINQ\LINQ\obj\Debug\LINQ.csproj.CoreCompileInputs.cache
+E:\adv-dotnet-spr23\LINQ\LINQ\obj\Debug\LINQ.exe
+E:\adv-dotnet-spr23\LINQ\LINQ\obj\Debug\LINQ.pdb
