@@ -3,7 +3,7 @@
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class AllAdded : DbMigration
+    public partial class AllTable_PkFkAddedV10 : DbMigration
     {
         public override void Up()
         {
@@ -54,8 +54,21 @@
                         Total = c.Double(nullable: false),
                         OrderDate = c.DateTime(nullable: false),
                         Status = c.String(nullable: false),
+                        OrderedBy = c.String(maxLength: 10),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Users", t => t.OrderedBy)
+                .Index(t => t.OrderedBy);
+            
+            CreateTable(
+                "dbo.Users",
+                c => new
+                    {
+                        Username = c.String(nullable: false, maxLength: 10),
+                        Password = c.String(nullable: false, maxLength: 20),
+                        Type = c.String(nullable: false, maxLength: 10),
+                    })
+                .PrimaryKey(t => t.Username);
             
         }
         
@@ -63,10 +76,13 @@
         {
             DropForeignKey("dbo.OrderDetails", "PId", "dbo.Products");
             DropForeignKey("dbo.OrderDetails", "OId", "dbo.Orders");
+            DropForeignKey("dbo.Orders", "OrderedBy", "dbo.Users");
             DropForeignKey("dbo.Products", "CId", "dbo.Categories");
+            DropIndex("dbo.Orders", new[] { "OrderedBy" });
             DropIndex("dbo.OrderDetails", new[] { "PId" });
             DropIndex("dbo.OrderDetails", new[] { "OId" });
             DropIndex("dbo.Products", new[] { "CId" });
+            DropTable("dbo.Users");
             DropTable("dbo.Orders");
             DropTable("dbo.OrderDetails");
             DropTable("dbo.Products");

@@ -1,4 +1,5 @@
-﻿using PMS_EFCodeFirst.EF;
+﻿using PMS_EFCodeFirst.Auth;
+using PMS_EFCodeFirst.EF;
 using PMS_EFCodeFirst.EF.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace PMS_EFCodeFirst.Controllers
     public class OrderController : Controller
     {
         // GET: Order
+        [Logged]
         public ActionResult Index(int pageno=1)
         {
             PMSContext db=new PMSContext();

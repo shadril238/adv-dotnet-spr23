@@ -81,5 +81,5 @@ E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.cs
 E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.csproj.CopyComplete
 E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.dll
 E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.pdb
-E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.Migrations.AllAdded.resources
+E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.Migrations.AllTable_PkFkAddedV10.resources
 E:\adv-dotnet-spr23\PMS_EFCodeFirst\PMS_EFCodeFirst\obj\Debug\PMS_EFCodeFirst.csproj.GenerateResource.cache

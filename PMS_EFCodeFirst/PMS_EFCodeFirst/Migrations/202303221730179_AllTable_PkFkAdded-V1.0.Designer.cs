@@ -7,13 +7,13 @@ namespace PMS_EFCodeFirst.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class AllAdded : IMigrationMetadata
+    public sealed partial class AllTable_PkFkAddedV10 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AllAdded));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(AllTable_PkFkAddedV10));
         
         string IMigrationMetadata.Id
         {
-            get { return "202303012055207_AllAdded"; }
+            get { return "202303221730179_AllTable_PkFkAdded-V1.0"; }
         }
         
         string IMigrationMetadata.Source

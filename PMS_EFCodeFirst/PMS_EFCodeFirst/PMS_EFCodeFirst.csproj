@@ -127,21 +127,25 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Auth\Logged.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="EF\Models\Category.cs" />
     <Compile Include="EF\Models\Order.cs" />
     <Compile Include="EF\Models\OrderDetail.cs" />
     <Compile Include="EF\Models\Product.cs" />
+    <Compile Include="EF\Models\User.cs" />
     <Compile Include="EF\PMSContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202303012055207_AllAdded.cs" />
-    <Compile Include="Migrations\202303012055207_AllAdded.designer.cs">
-      <DependentUpon>202303012055207_AllAdded.cs</DependentUpon>
+    <Compile Include="Migrations\202303221730179_AllTable_PkFkAdded-V1.0.cs" />
+    <Compile Include="Migrations\202303221730179_AllTable_PkFkAdded-V1.0.designer.cs">
+      <DependentUpon>202303221730179_AllTable_PkFkAdded-V1.0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -182,10 +186,10 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Order\Index.cshtml" />
     <Content Include="Views\Order\Cart.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -201,8 +205,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202303012055207_AllAdded.resx">
-      <DependentUpon>202303012055207_AllAdded.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303221730179_AllTable_PkFkAdded-V1.0.resx">
+      <DependentUpon>202303221730179_AllTable_PkFkAdded-V1.0.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
