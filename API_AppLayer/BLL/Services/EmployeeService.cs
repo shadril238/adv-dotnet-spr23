@@ -1,4 +1,5 @@
 ﻿//shadril238
+using BLL.DTOs;
 using DAL.Models;
 using DAL.Repos;
 using System;
@@ -11,25 +12,59 @@ namespace BLL.Services
 {
     public class EmployeeService
     {
-        public static object Get()
+        public static List<EmployeeDTO> Get()
         {
-            return EmployeeRepo.GetEmp();
+            var data = EmployeeRepo.GetEmp();
+            return Convert(data.ToList());
         }
-        public static object Get(int id)
+        public static EmployeeDTO Get(int id)
         {
-            return EmployeeRepo.FindEmp(id);
+            return Convert(EmployeeRepo.FindEmp(id));
         }
-        public static bool Create(Employee employee)
+        public static bool Create(EmployeeDTO employee)
         {
-            return EmployeeRepo.CreateEmp(employee);
+            var data = Convert(employee);
+            return EmployeeRepo.CreateEmp(data);
         }
-        public static bool Update(Employee employee)
+        public static bool Update(EmployeeDTO employee)
         {
-            return EmployeeRepo.UpdateEmp(employee);
+            var data = Convert(employee);
+            return EmployeeRepo.UpdateEmp(data);
         }
         public static bool Delete(int id)
         {
             return EmployeeRepo.DeleteEmp(id);
         }
+
+        //Convertion Methods
+        static EmployeeDTO Convert(Employee employee)
+        {
+            return new EmployeeDTO()
+            {
+                Id = employee.Id,
+                Name = employee.Name,
+            };
+        }
+
+        static Employee Convert(EmployeeDTO employee)
+        {
+            return new Employee()
+            {
+                Id = employee.Id,
+                Name = employee.Name,
+            };
+        }
+
+        static List<EmployeeDTO> Convert(List<Employee> employees)
+        {
+            var data=new List<EmployeeDTO>();
+            foreach (var employee in employees)
+            {
+                data.Add(Convert(employee));
+            }
+            return data;
+        }
+
+
     }
 }
