@@ -1,7 +1,10 @@
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\BLL.dll
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\BLL.pdb
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\DAL.dll
+E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\EntityFramework.dll
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\DAL.pdb
+E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\DAL.dll.config
+E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\bin\Debug\EntityFramework.xml
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 E:\adv-dotnet-spr23\Final_LabTask_3-Tier\BLL\obj\Debug\BLL.csproj.CopyComplete

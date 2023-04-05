@@ -1,4 +1,5 @@
 ﻿//shadril238
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -19,7 +20,8 @@ namespace BLL.DTOs
         public string Description { get; set; }
         [Required]
         public DateTime Date { get; set; }
-        [Required]
+        [Required,ForeignKey("Category")]
         public int CId { get; set; }
+        public virtual CategoryDTO Category { get; set; }
     }
 }

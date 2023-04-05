@@ -19,7 +19,8 @@ namespace BLL.Services
         }
         public static CategoryDTO Get(int id)
         {
-            return Convert(CategoryRepo.Get(id));
+            var data = CategoryRepo.Get(id);
+            return Convert(data);
         }
         public static bool Create(CategoryDTO category)
         {
