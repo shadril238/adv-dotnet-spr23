@@ -1,5 +1,6 @@
 ﻿//shadril238
 using BLL.DTOs;
+using DAL;
 using DAL.Models;
 using DAL.Repos;
 using System;
@@ -14,27 +15,27 @@ namespace BLL.Services
     {
         public static List<CategoryDTO> Get()
         {
-            var data=CategoryRepo.Get();
+            var data=DataAccessFactory.CategorysData().Get();
             return Convert(data);
         }
         public static CategoryDTO Get(int id)
         {
-            var data = CategoryRepo.Get(id);
+            var data = DataAccessFactory.CategorysData().Get(id);   
             return Convert(data);
         }
         public static bool Create(CategoryDTO category)
         {
             var data=Convert(category);
-            return CategoryRepo.Create(data);
+            return DataAccessFactory.CategorysData().Insert(data);
         }
         public static bool Update(CategoryDTO category)
         {
             var data = Convert(category);
-            return CategoryRepo.Update(data);
+            return DataAccessFactory.CategorysData().Update(data);
         }
         public static bool Delete(int id)
         {
-            return CategoryRepo.Delete(id);
+            return DataAccessFactory.CategorysData().Delete(id);
         }
 
         //Convertion between models and modelsDTO

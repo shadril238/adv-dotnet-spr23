@@ -1,4 +1,5 @@
-﻿using DAL.Models;
+﻿using DAL.Interfaces;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class CategoryRepo
+    internal class CategoryRepo : Repo, IRepo<Category, int, bool>
     {
+        /*
         static NewsContext db;
         static CategoryRepo()
         {
@@ -39,6 +41,44 @@ namespace DAL.Repos
             var emp = Get(id);
             db.Categories.Remove(emp);
             return db.SaveChanges() > 0;
+        }
+        */
+        public bool Delete(int id)
+        {
+            var data = db.Categories.Find(id);
+            if (data != null)
+            {
+                db.Categories.Remove(data);
+                return db.SaveChanges()>0;
+            }
+            return false;
+        }
+
+        public List<Category> Get()
+        {
+            return db.Categories.ToList();
+        }
+
+        public Category Get(int id)
+        {
+            return db.Categories.Find(id);
+        }
+
+        public bool Insert(Category obj)
+        {
+            db.Categories.Add(obj);
+            return db.SaveChanges() > 0;
+        }
+
+        public bool Update(Category obj)
+        {
+            var exst = db.Categories.Find(obj.Id);
+            if (exst != null)
+            {
+                db.Entry(exst).CurrentValues.SetValues(obj);
+                return db.SaveChanges() > 0;
+            }
+            return false;
         }
     }
 }

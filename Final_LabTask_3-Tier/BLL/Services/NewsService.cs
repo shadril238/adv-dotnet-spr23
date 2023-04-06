@@ -1,5 +1,6 @@
 ﻿//shadril238
 using BLL.DTOs;
+using DAL;
 using DAL.Models;
 using DAL.Repos;
 using System;
@@ -15,27 +16,27 @@ namespace BLL.Services
 
         public static List<NewsDTO> Get()
         {
-            var data = NewsRepo.Get();
+            var data = DataAccessFactory.NewsData().Get();
             return Convert(data);
         }
 
         public static NewsDTO Get(int id)
         {
-            return Convert(NewsRepo.Get(id));
+            return Convert(DataAccessFactory.NewsData().Get(id));
         }
         public static bool Create(NewsDTO news)
         {
             var data = Convert(news);
-            return NewsRepo.Create(data);
+            return DataAccessFactory.NewsData().Insert(data);
         }
         public static bool Update(NewsDTO news)
         {
             var data = Convert(news);
-            return NewsRepo.Update(data);
+            return DataAccessFactory.NewsData().Update(data);
         }
         public static bool Delete(int id)
         {
-            return NewsRepo.Delete(id);
+            return DataAccessFactory.NewsData().Delete(id);
         }
 
         //Convertion between models and modelsDTO
