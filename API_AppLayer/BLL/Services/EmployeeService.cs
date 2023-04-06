@@ -1,5 +1,6 @@
 ﻿//shadril238
 using BLL.DTOs;
+using DAL;
 using DAL.Models;
 using DAL.Repos;
 using System;
@@ -14,26 +15,27 @@ namespace BLL.Services
     {
         public static List<EmployeeDTO> Get()
         {
-            var data = EmployeeRepo.GetEmp();
+            var data = DataAccessFactory.EmployeeData().Get();
             return Convert(data.ToList());
         }
         public static EmployeeDTO Get(int id)
         {
-            return Convert(EmployeeRepo.FindEmp(id));
+            var data=DataAccessFactory.EmployeeData().Get(id);
+            return Convert(data);
         }
         public static bool Create(EmployeeDTO employee)
         {
             var data = Convert(employee);
-            return EmployeeRepo.CreateEmp(data);
+            return DataAccessFactory.EmployeeData().Insert(data);
         }
         public static bool Update(EmployeeDTO employee)
         {
             var data = Convert(employee);
-            return EmployeeRepo.UpdateEmp(data);
+            return DataAccessFactory.EmployeeData().Update(data);
         }
         public static bool Delete(int id)
         {
-            return EmployeeRepo.DeleteEmp(id);
+            return DataAccessFactory.EmployeeData().Delete(id);
         }
 
         //Convertion Methods

@@ -25,7 +25,7 @@ namespace API_AppLayer.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
-        [HttpGet, Route("api/employees/find/{id}")]
+        [HttpPost, Route("api/employees/find/{id}")]
         public HttpResponseMessage Find(int id)
         {
             try

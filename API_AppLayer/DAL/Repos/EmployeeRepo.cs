@@ -1,4 +1,5 @@
-﻿using DAL.Models;
+﻿using DAL.Interfaces;
+using DAL.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,42 +8,81 @@ using System.Threading.Tasks;
 
 namespace DAL.Repos
 {
-    public class EmployeeRepo
+    internal class EmployeeRepo : Repo, IRepo<Employee, int, bool>
     {
-        static EmpContext db;
-        static EmployeeRepo()
+        /*
+        static empcontext db;
+        static employeerepo()
         {
-            db = new EmpContext();
+            db = new empcontext();
         }
 
-        public static List<Employee> GetEmp()
+        public static list<employee> getemp()
+        {
+            return db.employees.tolist();
+        }
+
+        public static employee findemp(int id)
+        {
+            return db.employees.find(id);
+        }
+
+        public static bool createemp(employee emp)
+        {
+            db.employees.add(emp);
+            return db.savechanges()>0;
+        }
+
+        public static bool updateemp(employee emp)
+        {
+            var existemp=findemp(emp.id);
+            db.entry(existemp).currentvalues.setvalues(emp);
+            return db.savechanges() > 0;
+        }
+
+        public static bool deleteemp(int id)
+        {
+            var existemp = findemp(id);
+            db.employees.remove(existemp);
+            return db.savechanges() > 0;
+        }
+        */
+        public bool Delete(int id)
+        {
+            var exst=db.Employees.Find(id);
+            if (exst != null)
+            {
+                db.Employees.Remove(exst);
+                return db.SaveChanges()>0;
+            }
+            return false;
+        }
+
+        public List<Employee> Get()
         {
             return db.Employees.ToList();
         }
 
-        public static Employee FindEmp(int id)
+        public Employee Get(int id)
         {
             return db.Employees.Find(id);
         }
 
-        public static bool CreateEmp(Employee emp)
+        public bool Insert(Employee obj)
         {
-            db.Employees.Add(emp);
+            db.Employees.Add(obj);
             return db.SaveChanges()>0;
         }
 
-        public static bool UpdateEmp(Employee emp)
+        public bool Update(Employee obj)
         {
-            var existEmp=FindEmp(emp.Id);
-            db.Entry(existEmp).CurrentValues.SetValues(emp);
-            return db.SaveChanges() > 0;
-        }
-
-        public static bool DeleteEmp(int id)
-        {
-            var existEmp = FindEmp(id);
-            db.Employees.Remove(existEmp);
-            return db.SaveChanges() > 0;
+            var exst = db.Employees.Find(obj.Id);
+            if (exst != null)
+            {
+                db.Entry(exst).CurrentValues.SetValues(obj);
+                return db.SaveChanges() > 0;
+            }
+            return false;
         }
     }
 }
