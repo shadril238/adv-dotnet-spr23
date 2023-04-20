@@ -1,0 +1,15 @@
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\DAL.dll.config
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\DAL.dll
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\DAL.pdb
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\EntityFramework.dll
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\EntityFramework.SqlServer.dll
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\EntityFramework.xml
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\bin\Debug\EntityFramework.SqlServer.xml
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.csproj.CopyComplete
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.dll
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.pdb
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.Migrations.initDB.resources
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.csproj.GenerateResource.cache
+E:\adv-dotnet-spr23\PostComment-FullStack\DAL\obj\Debug\DAL.Migrations.TokenDB.resources
