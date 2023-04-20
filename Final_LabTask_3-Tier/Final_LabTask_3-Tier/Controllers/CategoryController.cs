@@ -27,7 +27,7 @@ namespace Final_LabTask_3_Tier.Controllers
 
         }
         [HttpPost, Route("api/categories/find/{id}")]
-        public HttpResponseMessage FindCategoriess(int id)
+        public HttpResponseMessage FindCategories(int id)
         {
             try
             {
